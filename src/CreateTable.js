@@ -2,10 +2,6 @@ import React from "react";
 import { useForm } from 'react-hook-form'
 import AWS from "aws-sdk";
 
-AWS.config.region = "ap-southeast-2"; // Region
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: process.env.REACT_APP_COGNITO_IDENTITYPOOL_ID
-});
 
 
 //https://docs.amazonaws.cn/en_us/amazondynamodb/latest/APIReference/API_AttributeValue.html
@@ -126,7 +122,7 @@ export default function() {
       
  
  
-      <input type="submit" />
+      <input type="submit" value="Create Table"/>
     </form>
   );
 }
