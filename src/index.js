@@ -20,6 +20,7 @@ function App ({children})  {
       <nav>
         <Link to="/createtable">Create Table</Link>{" "}
         <Link to="/putitem">Put Item</Link>
+        <Link to="/listtables">Put Item</Link>
       </nav>
       <Router>
       <CreateTable path="/createtable" />

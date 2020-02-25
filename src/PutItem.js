@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import ddb_describetable from "./ddb_describetable";
+import {ddb_describetable} from "./dynamo_util";
 
 
 //gets an array that added the value field from data to the attr arrays
-function createParams(data, attr, tableName) {
+function createParams(data, attr) {
   // console.log(data)
   //console.log(attr)
   // console.log(tableName)
@@ -25,25 +25,30 @@ function createParams(data, attr, tableName) {
 export default function PutItem() {
   const [tableName] = useState("name1");
 
-  const [attr, setAttr] = useState([]);
+  const [tableDesc, setTableDesc] = useState([]);
 
   const { register, handleSubmit } = useForm();
 
   const onSubmit = data => {
-    createParams(data, attr, tableName);
+    createParams(data, tableDesc);
   };
 
   //https://github.com/facebook/react/issues/14326
   useEffect(() => {
+    //first define an async function
     async function fetchMyAPI() {
-      await ddb_describetable(tableName, setAttr);
+        await ddb_describetable(tableName, setTableDesc);
     }
 
+    //then use it
     fetchMyAPI();
-  }, []);
+    //re render only if tablename changes
+  }, [tableName]);
+  
 
-  const formItems = attr.map(attrItem => (
-    <fieldset>
+  //console.log(tableDesc)
+  const formItems = tableDesc.map( (attrItem,index) => (
+    <fieldset key={index}>
       <label htmlFor={attrItem.AttributeName}>{attrItem.AttributeName} </label>
       <input
         type="text"
