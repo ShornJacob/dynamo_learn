@@ -5,8 +5,9 @@ import * as serviceWorker from './serviceWorker';
 import { Router, Link } from "@reach/router";
 import AWS from "aws-sdk";
 
-import CreateTable from './CreateTable'
+
 import GetTableItem from './GetTableItem'
+import PutTableItem from './PutTableItem'
 
 AWS.config.region = "ap-southeast-2"; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -22,9 +23,11 @@ function App ({children})  {
         <Link to="/putitem">Put Item</Link>
         <Link to="/listtables">Put Item</Link>
         <Link to="/getitem">Get Item</Link>
+        <Link to="/putitem">Put Item</Link>
       </nav>
       <Router>
       <GetTableItem path="/getitem" />
+      <PutTableItem path="/putitem" />
 
    
     </Router>
