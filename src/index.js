@@ -8,6 +8,8 @@ import AWS from "aws-sdk";
 
 import GetTableItem from './GetTableItem'
 import PutTableItem from './PutTableItem'
+import UpdateTableItem from './UpdateTableItem'
+
 
 AWS.config.region = "ap-southeast-2"; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -24,10 +26,12 @@ function App ({children})  {
         <Link to="/listtables">Put Item</Link>
         <Link to="/getitem">Get Item</Link>
         <Link to="/putitem">Put Item</Link>
+        <Link to="/updateitem">Update Item</Link>
       </nav>
       <Router>
       <GetTableItem path="/getitem" />
       <PutTableItem path="/putitem" />
+      <UpdateTableItem path="/updateitem" />
 
    
     </Router>
