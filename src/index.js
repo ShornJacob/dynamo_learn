@@ -10,6 +10,7 @@ import GetTableItem from './GetTableItem'
 import PutTableItem from './PutTableItem'
 import UpdateTableItem from './UpdateTableItem'
 import MoviesItemOps04 from './MoviesItemOps04'
+import MoviesItemOps05 from './MoviesItemOps05'
 
 
 AWS.config.region = "ap-southeast-2"; // Region
@@ -29,6 +30,7 @@ function App ({children})  {
         <Link to="/putitem">Put Item</Link>
         <Link to="/updateitem">Update Item</Link>
         <Link to="/atomiccounter">Atomic Counter</Link>
+        <Link to="/conditionalupdate">Conditional update</Link>
       </nav>
 
     <Router>
@@ -36,7 +38,8 @@ function App ({children})  {
       <PutTableItem path="/putitem" />
       <UpdateTableItem path="/updateitem" />
       <MoviesItemOps04 path="/atomiccounter" />
-        
+      <MoviesItemOps05 path="/conditionalupdate" />
+
     </Router>
 
     </div>)
