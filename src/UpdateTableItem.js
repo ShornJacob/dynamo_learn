@@ -28,8 +28,6 @@ function ddbdoc_update(tableName, hashId, sortID , info) {
   }
 }
 
-    
-
     //console.log(params)
   
     docClient.update(params, function(err, data) {

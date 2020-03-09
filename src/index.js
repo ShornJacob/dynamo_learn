@@ -9,6 +9,7 @@ import AWS from "aws-sdk";
 import GetTableItem from './GetTableItem'
 import PutTableItem from './PutTableItem'
 import UpdateTableItem from './UpdateTableItem'
+import MoviesItemOps04 from './MoviesItemOps04'
 
 
 AWS.config.region = "ap-southeast-2"; // Region
@@ -27,20 +28,24 @@ function App ({children})  {
         <Link to="/getitem">Get Item</Link>
         <Link to="/putitem">Put Item</Link>
         <Link to="/updateitem">Update Item</Link>
+        <Link to="/atomiccounter">Atomic Counter</Link>
       </nav>
-      <Router>
+
+    <Router>
       <GetTableItem path="/getitem" />
       <PutTableItem path="/putitem" />
       <UpdateTableItem path="/updateitem" />
-
-   
+      <MoviesItemOps04 path="/atomiccounter" />
+        
     </Router>
+
     </div>)
  }
 
 ReactDOM.render(<App/>, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
+//f you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
+
 serviceWorker.unregister();
