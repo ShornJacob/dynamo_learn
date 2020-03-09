@@ -2,7 +2,7 @@ import React from 'react'
 import AWS from "aws-sdk";
 
 
-
+//https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Js.03.html
 
 function increaseRating() {
 

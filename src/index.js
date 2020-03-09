@@ -11,6 +11,7 @@ import PutTableItem from './PutTableItem'
 import UpdateTableItem from './UpdateTableItem'
 import MoviesItemOps04 from './MoviesItemOps04'
 import MoviesItemOps05 from './MoviesItemOps05'
+import ConditionalDelete from './ConditionalDelete'
 
 
 AWS.config.region = "ap-southeast-2"; // Region
@@ -31,6 +32,7 @@ function App ({children})  {
         <Link to="/updateitem">Update Item</Link>
         <Link to="/atomiccounter">Atomic Counter</Link>
         <Link to="/conditionalupdate">Conditional update</Link>
+        <Link to="/conditionaldelete">Conditional delete</Link>
       </nav>
 
     <Router>
@@ -39,6 +41,7 @@ function App ({children})  {
       <UpdateTableItem path="/updateitem" />
       <MoviesItemOps04 path="/atomiccounter" />
       <MoviesItemOps05 path="/conditionalupdate" />
+      <ConditionalDelete path="/conditionaldelete" />
 
     </Router>
 

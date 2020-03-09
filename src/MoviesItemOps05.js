@@ -2,7 +2,7 @@ import React from 'react'
 import AWS from "aws-sdk";
 
 
-
+//https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Js.03.html
 
 function increaseRating() {
 
@@ -34,9 +34,9 @@ function increaseRating() {
 
     docClient.update(params, function(err, data) {
         if (err) {
-            console.log( "Unable to update rating: \n" + JSON.stringify(err, undefined, 2))
+            console.log( "The conditional update failed: \n" + JSON.stringify(err, undefined, 2))
         } else {
-            console.log("Deleted an array item in object " + JSON.stringify(data, undefined, 2))
+            console.log("The conditional update succeeded: " + JSON.stringify(data, undefined, 2))
         }
     })
 
