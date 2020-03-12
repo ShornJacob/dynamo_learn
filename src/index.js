@@ -14,6 +14,8 @@ import MoviesItemOps05 from './MoviesItemOps05'
 import ConditionalDelete from './ConditionalDelete'
 
 import CreateS3Album from './CreateS3Album'
+import AddFileToS3 from './AddFileToS3'
+
 
 
 AWS.config.region = "ap-southeast-2"; // Region
@@ -38,7 +40,7 @@ function App ({children})  {
       </nav>
       <nav>
         <Link to="/creates3folder">Create folder</Link>{" "}
-      
+        <Link to="/adddfiletos3">Add file to s3</Link>{" "}
       </nav>
 
     <Router>
@@ -46,6 +48,7 @@ function App ({children})  {
       <PutTableItem path="/putitem" />
       <UpdateTableItem path="/updateitem" />
       <CreateS3Album path="/creates3folder" />
+      <AddFileToS3 path="/adddfiletos3" />
     </Router>
 
     </div>)
