@@ -15,6 +15,7 @@ import ConditionalDelete from './ConditionalDelete'
 
 import CreateS3Album from './CreateS3Album'
 import AddFileToS3 from './AddFileToS3'
+import AddFilesToS3 from './AddFilesToS3'
 
 
 
@@ -39,8 +40,9 @@ function App ({children})  {
         <Link to="/conditionaldelete">Conditional delete</Link>
       </nav>
       <nav>
-        <Link to="/creates3folder">Create folder</Link>{" "}
-        <Link to="/adddfiletos3">Add file to s3</Link>{" "}
+        <Link to="/creates3folder">Create folder</Link>
+        <Link to="/addfiletos3">Add file to s3</Link>
+        <Link to="/addfilestos3">Add files to s3</Link>
       </nav>
 
     <Router>
@@ -48,7 +50,8 @@ function App ({children})  {
       <PutTableItem path="/putitem" />
       <UpdateTableItem path="/updateitem" />
       <CreateS3Album path="/creates3folder" />
-      <AddFileToS3 path="/adddfiletos3" />
+      <AddFileToS3 path="/addfiletos3" />
+      <AddFilesToS3 path="/addfilestos3" />
     </Router>
 
     </div>)
