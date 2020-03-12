@@ -13,6 +13,8 @@ import MoviesItemOps04 from './MoviesItemOps04'
 import MoviesItemOps05 from './MoviesItemOps05'
 import ConditionalDelete from './ConditionalDelete'
 
+import CreateS3Album from './CreateS3Album'
+
 
 AWS.config.region = "ap-southeast-2"; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -34,15 +36,16 @@ function App ({children})  {
         <Link to="/conditionalupdate">Conditional update</Link>
         <Link to="/conditionaldelete">Conditional delete</Link>
       </nav>
+      <nav>
+        <Link to="/creates3folder">Create folder</Link>{" "}
+      
+      </nav>
 
     <Router>
       <GetTableItem path="/getitem" />
       <PutTableItem path="/putitem" />
       <UpdateTableItem path="/updateitem" />
-      <MoviesItemOps04 path="/atomiccounter" />
-      <MoviesItemOps05 path="/conditionalupdate" />
-      <ConditionalDelete path="/conditionaldelete" />
-
+      <CreateS3Album path="/creates3folder" />
     </Router>
 
     </div>)
