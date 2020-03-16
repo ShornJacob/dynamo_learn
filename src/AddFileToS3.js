@@ -9,7 +9,7 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 
 
 //https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/s3-example-photo-album.html
-function addPhoto(bucketName,folderName,files) {
+async function addPhoto(bucketName,folderName,files) {
 
 
 
@@ -31,7 +31,8 @@ function addPhoto(bucketName,folderName,files) {
       //Returns a 'thenable' promise.
            // Use S3 ManagedUpload class as it supports multipart uploads
 
- var upload = new AWS.S3.ManagedUpload({
+           ////Returns a 'thenable' promise.
+ const managedUpload = await new AWS.S3.ManagedUpload({
     params: {
       Bucket: bucketName,
       Key: fileKey,
@@ -40,20 +41,25 @@ function addPhoto(bucketName,folderName,files) {
     //canned ACL
      // ACL: "public-read"
     }
-  });
+  }).promise()
 
-  //Returns a 'thenable' promise.
-  var promise = upload.promise();
 
-  promise.then(
-    function(data) {
-      console.log("Successfully uploaded photo.")
-     // viewAlbum(albumName);
-    },
-    function(err) {
-      console.log("There was an error uploading your photo: " + err.message)
-    }
-  );
+  //promises are thenable and can be awaited on
+
+  // promise.then(
+  //   function(data) {
+  //     console.log("Successfully uploaded photo.")
+  //    // viewAlbum(albumName);
+  //   },
+  //   function(err) {
+  //     console.log("There was an error uploading your photo: " + err.message)
+  //   }
+  // );
+
+ //console.log(managedUpload)
+
+ return managedUpload
+
 
 }
 
