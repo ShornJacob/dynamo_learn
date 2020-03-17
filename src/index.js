@@ -17,7 +17,7 @@ import CreateS3Album from './CreateS3Album'
 import AddFileToS3 from './AddFileToS3'
 import AddFilesToS3 from './AddFilesToS3'
 import ViewFolderInS3 from './ViewFolderInS3'
-import S3Component from './S3Component'
+
 
 
 
@@ -57,7 +57,7 @@ function App ({children})  {
       <AddFileToS3 path="/addfiletos3" />
       <AddFilesToS3 path="/addfilestos3" />
       <ViewFolderInS3 path="/viewfolderins3" />
-      <S3Component path="/s3axios"/>
+ 
     </Router>
 
     </div>)
