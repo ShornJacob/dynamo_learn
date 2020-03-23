@@ -1,6 +1,5 @@
-import AWS from "aws-sdk";
 import React from 'react'
-
+import AWS from './aws-config'
 
 //https://www.youtube.com/watch?v=SU4dZ-qgR1Y&t=192s
 //https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/dynamodb/ddbdoc_get.js

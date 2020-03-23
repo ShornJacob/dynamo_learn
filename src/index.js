@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { Router, Link } from "@reach/router";
-import AWS from "aws-sdk";
 
 
 import GetTableItem from './GetTableItem'
@@ -21,10 +20,7 @@ import ViewFolderInS3 from './ViewFolderInS3'
 
 
 
-AWS.config.region = "ap-southeast-2"; // Region
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: process.env.REACT_APP_COGNITO_IDENTITYPOOL_ID
-});
+
 
 function App ({children})  {
 
