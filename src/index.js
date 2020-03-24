@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
@@ -8,9 +8,9 @@ import { Router, Link } from "@reach/router";
 import GetTableItem from './GetTableItem'
 import PutTableItem from './PutTableItem'
 import UpdateTableItem from './UpdateTableItem'
-import MoviesItemOps04 from './MoviesItemOps04'
-import MoviesItemOps05 from './MoviesItemOps05'
-import ConditionalDelete from './ConditionalDelete'
+// import MoviesItemOps04 from './MoviesItemOps04'
+// import MoviesItemOps05 from './MoviesItemOps05'
+// import ConditionalDelete from './ConditionalDelete'
 
 import CreateS3Album from './CreateS3Album'
 import AddFileToS3 from './AddFileToS3'

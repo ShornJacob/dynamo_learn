@@ -32,7 +32,7 @@ function createAlbum(albumName) {
       //The HEAD operation retrieves metadata from an object without returning the object itself. This operation is useful if you're only interested in an object's metadata. 
       //To use HEAD, you must have READ access to the object
 
-      let returnMessage
+    
 
       s3.headObject({ Key: albumKey }, function(err, data) {
         if (!err) {
@@ -79,7 +79,7 @@ export default function CreateS3Album() {
 
     const albumName = datetime + "-" + aRandom
 
-    let message;
+   
 
     AWS.config.credentials.get(function(){
       console.log(albumName)
