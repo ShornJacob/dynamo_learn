@@ -8,7 +8,8 @@ import AWS from './aws-config'
 //The first attribute is the partition key, and the second attribute is the sort key.
 function ddbdoc_get(tableName, hashId, sortID , info) {
     // Create DynamoDB document client
-    var docClient = new AWS.DynamoDB.DocumentClient({ apiVersion: "2012-08-10" });
+    var docClient = new AWS.DynamoDB.DocumentClient({ convertEmptyValues : true});
+    // var docClient = new AWS.DynamoDB.DocumentClient({ apiVersion: "2012-08-10" });
   
   
     var params = {
@@ -50,7 +51,7 @@ export default function PutTableItem() {
 
       const info = {
           attr1 : "derf",
-          attr2 : "deft"
+          attr2 : ''
       }
 
     //https://docs.aws.amazon.com/cognito/latest/developerguide/getting-credentials.html
