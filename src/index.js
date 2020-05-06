@@ -18,6 +18,8 @@ import AddFileToS3 from './AddFileToS3'
 import AddFilesToS3 from './AddFilesToS3'
 import ViewFolderInS3 from './ViewFolderInS3'
 
+import DropzoneDialogExample from './DropZone'
+
 
 
 
@@ -40,6 +42,7 @@ function App ({children})  {
         <Link to="/atomiccounter">Atomic Counter</Link>
         <Link to="/conditionalupdate">Conditional update</Link>
         <Link to="/conditionaldelete">Conditional delete</Link>
+        
       </nav>
       <nav>
         <Link to="/creates3folder">Create folder</Link>
@@ -47,6 +50,10 @@ function App ({children})  {
         <Link to="/addfilestos3">Add files to s3</Link>
         <Link to="/viewfolderins3">View Folder in S3</Link>
         <Link to="/s3axios">S3 axios</Link>
+      </nav>
+
+      <nav>
+      <Link to="/dropzone">Drop Zone</Link>
       </nav>
 
     <Router>
@@ -57,7 +64,7 @@ function App ({children})  {
       <AddFileToS3 path="/addfiletos3" />
       <AddFilesToS3 path="/addfilestos3" />
       <ViewFolderInS3 path="/viewfolderins3" />
- 
+      <DropzoneDialogExample path="/dropzone" />
     </Router>
 
     </div>)
