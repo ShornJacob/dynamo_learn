@@ -31,7 +31,7 @@ async function viewAlbum(folderName) {
     //value of href https://s3.ap-southeast-2.amazonaws.com/
     console.log(href);
 
-    var bucketUrl = href + "pulse-tranparency" + "/";
+    var bucketUrl = href + "pulse-tranparency/" 
 
     console.log(bucketUrl);
 

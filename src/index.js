@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { Router, Link } from "@reach/router";
-import AWS from "aws-sdk";
 
 
 import GetTableItem from './GetTableItem'
 import PutTableItem from './PutTableItem'
 import UpdateTableItem from './UpdateTableItem'
-import MoviesItemOps04 from './MoviesItemOps04'
-import MoviesItemOps05 from './MoviesItemOps05'
-import ConditionalDelete from './ConditionalDelete'
+// import MoviesItemOps04 from './MoviesItemOps04'
+// import MoviesItemOps05 from './MoviesItemOps05'
+// import ConditionalDelete from './ConditionalDelete'
 
 import CreateS3Album from './CreateS3Album'
 import AddFileToS3 from './AddFileToS3'
@@ -23,10 +22,7 @@ import DropzoneDialogExample from './DropZone'
 
 
 
-AWS.config.region = "ap-southeast-2"; // Region
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: process.env.REACT_APP_COGNITO_IDENTITYPOOL_ID
-});
+
 
 function App ({children})  {
 
