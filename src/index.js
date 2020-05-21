@@ -20,6 +20,7 @@ import ViewFolderInS3 from './ViewFolderInS3'
 import DropzoneDialogExample from './DropZone'
 import ReactDropZone from './ReactDropZone'
 import UseErrorBoundary from './UserErrorBoundary'
+import BsPagination from './BsPagination'
 
 
 
@@ -54,6 +55,7 @@ function App ({children})  {
       <Link to="/dropzone">Drop Zone</Link>
       <Link to="/reactdropzone">React Drop Zone</Link>
       <Link to="/errorboundary">Error Boundary</Link>
+      <Link to="/bootpagination">Bootstrap Pagination</Link>
       </nav>
 
     <Router>
@@ -67,6 +69,7 @@ function App ({children})  {
       <DropzoneDialogExample path="/dropzone" />
       <ReactDropZone path="/reactdropzone" />
       <UseErrorBoundary path="/errorboundary" />
+      <BsPagination path="/bootpagination" />
     </Router>
 
     </div>)
