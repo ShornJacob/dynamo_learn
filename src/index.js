@@ -18,6 +18,8 @@ import AddFilesToS3 from './AddFilesToS3'
 import ViewFolderInS3 from './ViewFolderInS3'
 
 import DropzoneDialogExample from './DropZone'
+import ReactDropZone from './ReactDropZone'
+import UseErrorBoundary from './UserErrorBoundary'
 
 
 
@@ -50,6 +52,8 @@ function App ({children})  {
 
       <nav>
       <Link to="/dropzone">Drop Zone</Link>
+      <Link to="/reactdropzone">React Drop Zone</Link>
+      <Link to="/errorboundary">Error Boundary</Link>
       </nav>
 
     <Router>
@@ -61,6 +65,8 @@ function App ({children})  {
       <AddFilesToS3 path="/addfilestos3" />
       <ViewFolderInS3 path="/viewfolderins3" />
       <DropzoneDialogExample path="/dropzone" />
+      <ReactDropZone path="/reactdropzone" />
+      <UseErrorBoundary path="/errorboundary" />
     </Router>
 
     </div>)
