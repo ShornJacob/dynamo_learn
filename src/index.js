@@ -27,12 +27,14 @@ import ContextError from 'ContextError';
 // import from './contexterror'
 
 
-
+import SnackBarProvider from 'providers/SnackBarProvider'
+import SnackBarNotification from 'SnackBarNotification'
 
 
 function App ({children})  {
 
     return(
+      <SnackBarProvider>
     <div>
       <nav>
         <Link to="/createtable">Create Table</Link>{" "}
@@ -84,7 +86,12 @@ function App ({children})  {
       <ContextError path="/contexterror" />
     </Router>
 
-    </div>)
+ 
+    </div>
+
+    <SnackBarNotification />
+    </SnackBarProvider>
+    )
  }
 
 ReactDOM.render(<App/>, document.getElementById('root'));
