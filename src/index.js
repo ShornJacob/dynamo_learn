@@ -21,7 +21,10 @@ import DropzoneDialogExample from './DropZone'
 import ReactDropZone from './ReactDropZone'
 import UseErrorBoundary from './UserErrorBoundary'
 import BsPagination from './BsPagination'
-
+import UseSnackBar from './UseSnackBar'
+import ContextError from 'ContextError';
+//import APIErrorContext from './APIErrorContext'
+// import from './contexterror'
 
 
 
@@ -49,6 +52,7 @@ function App ({children})  {
         <Link to="/addfilestos3">Add files to s3</Link>
         <Link to="/viewfolderins3">View Folder in S3</Link>
         <Link to="/s3axios">S3 axios</Link>
+        
       </nav>
 
       <nav>
@@ -56,6 +60,12 @@ function App ({children})  {
       <Link to="/reactdropzone">React Drop Zone</Link>
       <Link to="/errorboundary">Error Boundary</Link>
       <Link to="/bootpagination">Bootstrap Pagination</Link>
+      <Link to="/snackbar">Notification Bar</Link>
+      </nav>
+
+      <nav>
+      <Link to="/contexterror">Context Error</Link>
+
       </nav>
 
     <Router>
@@ -70,6 +80,8 @@ function App ({children})  {
       <ReactDropZone path="/reactdropzone" />
       <UseErrorBoundary path="/errorboundary" />
       <BsPagination path="/bootpagination" />
+      <UseSnackBar path="/snackbar" />
+      <ContextError path="/contexterror" />
     </Router>
 
     </div>)
