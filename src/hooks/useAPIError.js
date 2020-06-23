@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import  {SnackBarContext }  from 'providers/SnackBarProvider';
 
+//https://medium.com/yld-blog/handling-global-notifications-with-reacts-context-api-7d8135510d50
 function useAPIError() {
 
   //Accepts a context object (the value returned from React.createContext) and returns the current context value for that context. 

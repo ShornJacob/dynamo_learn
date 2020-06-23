@@ -10,23 +10,10 @@ export default function SnackBarNotification() {
 
 //error and remove error accesed from context
 //set error is accesed from component that outputs error
+//{errorState : false, errorMessage: ""}
 const { error, removeError } = useAPIError();
 
-
-//cant set deault state here, its already been rendered
-const [open, setOpen] = React.useState(false);
-
-
-//move open variable to context
-console.log(open)
-console.log(error)
-
-
-//check for error and set open
-// if (error == null) {
-//     setOpen(true)
-// }
-
+//console.log(error)
 
   return (
     <div>
@@ -35,9 +22,9 @@ console.log(error)
           vertical: 'bottom',
           horizontal: 'left',
         }}
-        open={open}
+        open={error.errorState}
         onClose={removeError}
-        message={error}
+        message={error.errorMessage}
         action={
           <React.Fragment>
             <IconButton size="small" aria-label="close" color="inherit" onClick={removeError}>

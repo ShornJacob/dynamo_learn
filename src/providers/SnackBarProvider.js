@@ -1,7 +1,7 @@
 import React,{ useState, useCallback }  from 'react'
 
 //a bottom-up approach to push errors and make them visible.
-
+//https://medium.com/yld-blog/handling-global-notifications-with-reacts-context-api-7d8135510d50
 
 //https://reactjs.org/docs/context.html#reactcreatecontext
 //Creates a Context object. 
@@ -18,23 +18,24 @@ export const SnackBarContext = React.createContext({
 //renders a higher order comonent with children??
   export default function SnackBarProvider({ children }) {
 
-    const [error, setError] = useState(null);
+    const cleanErrorObj = {errorState : false, errorMessage: ""}
+    const [error, setError] = useState(cleanErrorObj);
   
-    function removeError() {
-        setError(null)
-     }
+    // function removeError() {
+    //     setError(cleanErrorObj)
+    //  }
 
     // console.log(error)
   
     function addError(message){
-        //sets an object as error
-        setError(message);
+        //sets an object as error with the message
+        setError({errorState : true, errorMessage: message});
     }
 
     const contextValue = {
       error,
-      addError: useCallback((message, status) => addError(message), []),
-      removeError: useCallback(() => removeError(), [])
+      addError: useCallback((message) => addError(message), []),
+      removeError: useCallback(() => setError(cleanErrorObj), [cleanErrorObj])
     };
 
 
