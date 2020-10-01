@@ -25,7 +25,8 @@ import UseSnackBar from './UseSnackBar'
 import ContextError from 'ContextError';
 //import APIErrorContext from './APIErrorContext'
 // import from './contexterror'
-import MaterialUITable from './MaterialUITable'
+//import MaterialUITable from './MaterialUITable'
+import MaterialUITableClean from './MaterialUITableClean'
 
 import SnackBarProvider from 'providers/SnackBarProvider'
 import SnackBarNotification from 'SnackBarNotification'
@@ -86,7 +87,7 @@ function App ({children})  {
       <BsPagination path="/bootpagination" />
       <UseSnackBar path="/snackbar" />
       <ContextError path="/contexterror" />
-      <MaterialUITable path="/uitable" />
+      <MaterialUITableClean path="/uitable" />
     </Router>
 
  
