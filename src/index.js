@@ -30,6 +30,7 @@ import MaterialUITableClean from './MaterialUITableClean'
 
 import SnackBarProvider from 'providers/SnackBarProvider'
 import SnackBarNotification from 'SnackBarNotification'
+import Styles from './Styled/index'
 
 
 function App ({children})  {
@@ -69,6 +70,7 @@ function App ({children})  {
       <nav>
       <Link to="/contexterror">Context Error</Link>
       <Link to="/uitable">Material UI Table</Link>
+      <Link to="/styles">Styles</Link>
 
 
       </nav>
@@ -88,6 +90,9 @@ function App ({children})  {
       <UseSnackBar path="/snackbar" />
       <ContextError path="/contexterror" />
       <MaterialUITableClean path="/uitable" />
+      <Styles path="/styles" />
+      
+      
     </Router>
 
  
